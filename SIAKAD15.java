@@ -4,11 +4,17 @@ public class SIAKAD15 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // 1. Deklarasi array 2 dimensi dengan 4 siswa dan 3 mata kuliah
-        int[][] nilai = new int[4][3];
+        // Input jumlah siswa dan mata kuliah secara dinamis
+        System.out.print("Masukkan jumlah siswa: ");
+        int jumlahSiswa = sc.nextInt();
+        System.out.print("Masukkan jumlah mata kuliah: ");
+        int jumlahMatkul = sc.nextInt();
 
-        // 2. Input nilai dengan nested loop
-        System.out.println("=== Input Nilai Mahasiswa ===");
+        // Deklarasi array 2 dimensi 
+        int[][] nilai = new int[jumlahSiswa][jumlahMatkul];
+
+        // Input nilai dengan nested loop
+        System.out.println("\n=== Input Nilai Mahasiswa ===");
         for (int i = 0; i < nilai.length; i++) {
             System.out.println("Mahasiswa ke-" + (i + 1));
             for (int j = 0; j < nilai[i].length; j++) {
@@ -18,7 +24,7 @@ public class SIAKAD15 {
             System.out.println();
         }
 
-        // 3. Menampilkan nilai setiap mahasiswa
+        // Menampilkan nilai setiap mahasiswa
         System.out.println("\n=== Daftar Nilai Mahasiswa ===");
         for (int i = 0; i < nilai.length; i++) {
             System.out.print("Mahasiswa ke-" + (i + 1) + ": ");
@@ -28,7 +34,7 @@ public class SIAKAD15 {
             System.out.println();
         }
 
-        // 4. Menghitung rata-rata nilai setiap mahasiswa
+        // Menghitung rata-rata nilai setiap mahasiswa
         System.out.println("\n=== Rata-rata Nilai Setiap Mahasiswa ===");
         for (int i = 0; i < nilai.length; i++) {
             int total = 0;
@@ -39,7 +45,7 @@ public class SIAKAD15 {
             System.out.println("Rata-rata Mahasiswa ke-" + (i + 1) + ": " + rataRata);
         }
 
-        // 5. Menghitung rata-rata nilai setiap mata kuliah
+        // Menghitung rata-rata nilai setiap mata kuliah
         System.out.println("\n=== Rata-rata Nilai Setiap Mata Kuliah ===");
         for (int j = 0; j < nilai[0].length; j++) {
             int total = 0;
